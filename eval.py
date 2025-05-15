@@ -4,7 +4,7 @@ from openai import OpenAI
 from tqdm import tqdm
 import re
 import ast
-# OpenAI API 设置
+
 api_key = ""
 client = OpenAI(api_key=api_key)
 
@@ -130,10 +130,10 @@ def evaluate_model_response(reference_data, model_data):
     reference_list = normalize_answers(reference_data, "answer")
     model_list = normalize_answers(model_data, "generated")
     evaluation_prompt = f"""
-    [模型输出]
+    [model response]
     {json.dumps(model_list, indent=2, ensure_ascii=False)}
 
-    [参考答案]
+    [reference]
     {json.dumps(reference_list, indent=2, ensure_ascii=False)}
 
     """
@@ -158,12 +158,12 @@ def evaluate_model_response(reference_data, model_data):
                 result = json.loads(json_str)
                 return result
             else:
-                print("未找到有效的 JSON 数据")
+                print("Not found")
         except json.JSONDecodeError:
-            print(f"JSON解析失败，重试中 ({attempt+1}/{max_retries})")
+            print(f"JSON fail，retry ({attempt+1}/{max_retries})")
             continue
         except Exception as e:
-            print(f"错误: {str(e)}")
+            print(f"Error: {str(e)}")
             return None
     return None
 
@@ -173,9 +173,9 @@ def evaluate_json_files(input_folder, reference_folder):
     reference_files = load_json_files(reference_folder)  
     
     results = []
-    for filename in tqdm(input_files, desc="处理进度"):
+    for filename in tqdm(input_files, desc="Process"):
         if filename not in reference_files:
-            print(f"警告：{filename} 缺少对应的参考答案")
+            print(f"Warning：{filename} not found")
             continue
         
         result = evaluate_model_response(
@@ -195,7 +195,7 @@ def main(input_dir, output_dir):
     os.makedirs(output_dir, exist_ok=True)
     results = []
 
-    for filename in tqdm(input_files, desc="评估中"):
+    for filename in tqdm(input_files, desc="Evaing"):
         data = input_files[filename]
         eval_result = evaluate_model_response(data, data)
 
@@ -208,9 +208,9 @@ def main(input_dir, output_dir):
                 }, f, ensure_ascii=False, indent=2)
             results.append(eval_result)
 
-    # 汇总评分
+    
     if not results:
-        print("⚠️ 没有评分结果，检查输入文件是否正确。")
+        print("⚠️ No Result")
         return
 
     summary = {
@@ -223,7 +223,7 @@ def main(input_dir, output_dir):
     with open(os.path.join(output_dir, "summary.json"), 'w', encoding='utf-8') as f:
         json.dump(summary, f, indent=2, ensure_ascii=False)
 
-    print("\n✅ 评估汇总：")
+    print("\n✅ Summary：")
     print(json.dumps(summary, indent=2, ensure_ascii=False))
 
 
