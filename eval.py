@@ -52,38 +52,38 @@ Compute how many of the four multiple‑choice questions are correct.
 
 Semantic Accuracy:
 10-20: Extremely rare cases only, completely incorrect identification or attributes entirely unrelated to the standard answer.
-30-40: Clear inaccuracies exist but still partially recognizable, such as incorrect but similar species or noticeable attribute mistakes.
-50-60: Generally correct with minor but noticeable inaccuracies in biological attributes, behaviors, or ecological details.
-70-80: Accurate overall, minor wording or structural variations without substantial impact on correctness.
-90-100: Fully accurate and may also include additional beneficial ecological or behavioral information.
+20-40: Clear inaccuracies exist but still partially recognizable, such as incorrect but similar species or noticeable attribute mistakes.
+40-60: Generally correct with minor but noticeable inaccuracies in biological attributes, behaviors, or ecological details.
+60-80: Accurate overall, minor wording or structural variations without substantial impact on correctness.
+80-100: Fully accurate and may also include additional beneficial ecological or behavioral information.
 
 Detail Completeness:
 10-20: Only for substantial omission of critical information, significantly impacting overall understanding.
-30-40: Basic information provided with several secondary details missing.
-50-60: Adequately covers essential details but lacks certain finer or supplementary attributes.
-70-80: Comprehensive description with most details thoroughly covered.
-90-100: Exceptionally detailed, fully addressing the standard content and adding valuable supplementary information.
+20-40: Basic information provided with several secondary details missing.
+40-60: Adequately covers essential details but lacks certain finer or supplementary attributes.
+60-80: Comprehensive description with most details thoroughly covered.
+80-100: Exceptionally detailed, fully addressing the standard content and adding valuable supplementary information.
 
 Visual Perception Accuracy:
 10-20: Very rare, significant visual misinterpretation such as completely wrong species or setting.
-30-40: Contains evident errors in major visual characteristics but broadly represents the correct visual scenario.
-50-60: Mostly correct visually, minor mistakes in visual details such as slight discrepancies in posture or color.
-70-80: Very accurate depiction with negligible minor errors allowed.
-90-100: Outstandingly precise visual description, including potential additional insightful visual information beyond standard expectations
+20-40: Contains evident errors in major visual characteristics but broadly represents the correct visual scenario.
+40-60: Mostly correct visually, minor mistakes in visual details such as slight discrepancies in posture or color.
+60-80: Very accurate depiction with negligible minor errors allowed.
+80-100: Outstandingly precise visual description, including potential additional insightful visual information beyond standard expectations
 
 Environmental Description Accuracy:
 10-20: Completely incorrect, e.g., confusing coral reef with sandy environments, or incorrect water type and light conditions.
-30-40: Partially correct, but contains major errors, such as describing an environment feature that doesn't exist.
-50-60: Mostly correct, but might miss some environmental details like water temperature, salinity, or light conditions.
-70-80: Accurate environmental description, closely matching the standard answer.
-90-100: Fully accurate, providing additional environmental information like ecosystem dynamics or potential environmental impacts.
+20-40: Partially correct, but contains major errors, such as describing an environment feature that doesn't exist.
+40-60: Mostly correct, but might miss some environmental details like water temperature, salinity, or light conditions.
+60-80: Accurate environmental description, closely matching the standard answer.
+80-100: Fully accurate, providing additional environmental information like ecosystem dynamics or potential environmental impacts.
 
 Species Behavior Matching:
 10-20: Describes behavior entirely incorrectly, such as confusing stationary behavior with movement or misinterpreting social behavior.
-30-40: Some behavior is correctly described, but key behaviors like feeding or schooling are inaccurate.
-50-60: Most behaviors are described correctly, but some aspects (e.g., subtle movements or interactions) are missing.
-70-80: Accurate behavior description, with only slight variations.
-90-100: Completely accurate, and may provide further analysis of species behavior, such as ecological significance or adaptability.
+20-40: Some behavior is correctly described, but key behaviors like feeding or schooling are inaccurate.
+40-60: Most behaviors are described correctly, but some aspects (e.g., subtle movements or interactions) are missing.
+60-80: Accurate behavior description, with only slight variations.
+80-100: Completely accurate, and may provide further analysis of species behavior, such as ecological significance or adaptability.
 
 Please ensure that after your evaluation of each dimension, you also provide a detailed explanation for why you assigned that score. Then, provide the overall score based on the evaluations.
 
